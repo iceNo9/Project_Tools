@@ -17,7 +17,7 @@ def read_excel(file_path):
     current_paper_type = None
     paper_types = {}
     
-    for row in sheet.iter_rows(min_row=2, values_only=True):
+    for row in sheet.iter_rows(min_row=1, values_only=True):
         if row[0] is not None:  # 新纸型开始
             if current_paper_type is not None:
                 data_structure.append(paper_types)
